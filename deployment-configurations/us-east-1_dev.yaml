@@ -1,0 +1,9 @@
+environment: dev
+customer: danieloa
+# region is read from AWS_REGION environment variable
+vpc_cidr: "10.0.0.0/16"
+# subnets are automatically calculated from vpc_cidr and divided across availability zones
+availability_zones: ["us-east-1a", "us-east-1b", "us-east-1c"]
+product_domain: danieloa-vpc.example.com
+# Company IP for secure access to EKS HTTPS endpoint (use your office/VPN IP in CIDR format)
+company_ip: "0.0.0.0/0"  # Change this to your company IP for production
